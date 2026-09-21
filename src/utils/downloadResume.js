@@ -7,7 +7,7 @@ export const handleResumeDownload = (e, onComplete) => {
     onComplete();
   }
 
-  const fileUrl = '/Muthu_Raja_Guru_Resume.pdf';
+  const fileUrl = '/My_Resume.pdf';
   const fileName = 'Muthu_Raja_Guru_Resume.pdf';
 
   fetch(fileUrl)
@@ -15,12 +15,9 @@ export const handleResumeDownload = (e, onComplete) => {
       if (!response.ok) {
         throw new Error('Failed to fetch resume file');
       }
-      return response.arrayBuffer();
+      return response.blob();
     })
-    .then((buffer) => {
-      // Force application/octet-stream MIME type so mobile (iOS Safari / Android Chrome)
-      // and desktop browsers trigger a direct file download instead of inline PDF preview
-      const blob = new Blob([buffer], { type: 'application/octet-stream' });
+    .then((blob) => {
       const blobUrl = window.URL.createObjectURL(blob);
       const link = document.createElement('a');
       link.href = blobUrl;
@@ -30,10 +27,10 @@ export const handleResumeDownload = (e, onComplete) => {
       document.body.removeChild(link);
       setTimeout(() => {
         window.URL.revokeObjectURL(blobUrl);
-      }, 2000);
+      }, 1000);
     })
     .catch(() => {
-      // Direct anchor download fallback
+      // Fallback for browsers blocking blob downloads
       const fallbackLink = document.createElement('a');
       fallbackLink.href = fileUrl;
       fallbackLink.download = fileName;

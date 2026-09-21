@@ -3,7 +3,7 @@ const Experience = () => {
     <section className="section" id="experience">
       <div className="container">
         <div className="section-header">
-          <div className="section-label">Career Path</div>
+          <div className="section-label">⚡ Career Path</div>
           <h2 className="section-title">Experience</h2>
           <p className="section-subtitle">
             My professional journey as a developer.
@@ -18,12 +18,12 @@ const Experience = () => {
               <h3>Full Stack Developer</h3>
               <p className="company">ANJANA INFOTECH, Rajapalayam</p>
               <p>
-                 Joined ANJANA INFOTECH to learn and gain practical experience
-                 in Full Stack Development using the MERN stack. Developed hands-on
-                 knowledge of building web applications, working with frontend and 
-                 backend technologies, REST APIs, authentication systems, databases,
-                 and responsive web design. Gained valuable real-world experience 
-                 through practical projects and modern web development practices.
+                Joined ANJANA INFOTECH to learn and gain practical experience
+                in Full Stack Development using the MERN stack. Developed hands-on
+                knowledge of building web applications, working with frontend and 
+                backend technologies, REST APIs, authentication systems, databases,
+                and responsive web design. Gained valuable real-world experience 
+                through practical projects and modern web development practices.
               </p>
             </div>
           </div>

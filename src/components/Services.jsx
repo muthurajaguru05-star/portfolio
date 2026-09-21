@@ -24,7 +24,7 @@ const Services = () => {
     <section className="section services" id="services">
       <div className="container">
         <div className="section-header">
-          <div className="section-label">What I Offer</div>
+          <div className="section-label">⚡ What I Offer</div>
           <h2 className="section-title">Services</h2>
           <p className="section-subtitle">
             End-to-end web development services, from concept to deployment.

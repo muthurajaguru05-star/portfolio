@@ -3,7 +3,7 @@ const Projects = () => {
     <section className="section" id="projects">
       <div className="container">
         <div className="section-header">
-          <div className="section-label">My Work</div>
+          <div className="section-label">⚡ Featured Work</div>
           <h2 className="section-title">Projects</h2>
           <p className="section-subtitle">
             Real-world applications I have designed, built, and deployed.
@@ -12,21 +12,24 @@ const Projects = () => {
 
         {/* Featured Project */}
         <div className="project-card">
-          <div className="project-banner">
-            <div className="project-banner-text">
-              🚀 Full-Stack Web Application
+          <div className="project-header-bar">
+            <div className="code-header-dots">
+              <span className="code-dot dot-red"></span>
+              <span className="code-dot dot-yellow"></span>
+              <span className="code-dot dot-green"></span>
             </div>
+            <div className="window-title">fullstack-mern-app.v1.0.live</div>
           </div>
 
           <div className="project-body">
             <div className="project-meta">
               <span className="meta-badge">📅 Dec 2025 – Jun 2026</span>
               <span className="meta-badge">👨‍💻 Full-Stack Developer</span>
-              <span className="meta-badge">✅ Completed & Live</span>
+              <span className="meta-badge">🟢 Live Production</span>
             </div>
 
             <h3>Full-Stack Web Application</h3>
-            <p>
+            <p className="project-description">
               Developed a complete, end-to-end full-stack web application
               covering both frontend and backend development. Designed and
               implemented a responsive, user-friendly interface using modern
@@ -85,8 +88,13 @@ const Projects = () => {
             </div>
 
             <div className="project-actions">
-              <a href="#" className="btn btn-primary">Live Demo →</a>
-              <a href="#" className="btn btn-outline">GitHub Repository</a>
+              <a href="#" className="btn btn-primary">
+                <span>Live Demo</span>
+                <span>→</span>
+              </a>
+              <a href="#" className="btn btn-outline">
+                <span>GitHub Repository</span>
+              </a>
             </div>
           </div>
         </div>
