@@ -1,4 +1,4 @@
-import { handleResumeDownload } from '../utils/downloadResume';
+import { handleResumeDownload, RESUME_URL, RESUME_FILE_NAME } from '../utils/downloadResume';
 
 const Resume = () => {
   return (
@@ -12,8 +12,8 @@ const Resume = () => {
           </p>
           <div className="resume-cta">
             <a
-              href="/Muthu_Raja_Guru_Resume.pdf"
-              download="Muthu_Raja_Guru_Resume.pdf"
+              href={RESUME_URL}
+              download={RESUME_FILE_NAME}
               onClick={handleResumeDownload}
               className="btn btn-primary"
             >

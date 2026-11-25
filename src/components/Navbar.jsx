@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { handleResumeDownload } from '../utils/downloadResume';
+import { handleResumeDownload, RESUME_URL, RESUME_FILE_NAME } from '../utils/downloadResume';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -59,17 +59,11 @@ const Navbar = () => {
           <a href="#education" className={activeSection === 'education' ? 'active' : ''} onClick={handleNavClick}>Education</a>
           <a href="#projects" className={activeSection === 'projects' ? 'active' : ''} onClick={handleNavClick}>Projects</a>
           <a href="#contact" className={activeSection === 'contact' ? 'active' : ''} onClick={handleNavClick}>Contact</a>
-          <a
-            href="/Muthu_Raja_Guru_Resume.pdf"
-            download="Muthu_Raja_Guru_Resume.pdf"
-            onClick={handleResumeClick}
-            className="btn-resume"
-          >
-            <span>Resume</span>
-            <span>↓</span>
-          </a>
-        </div>
 
+          <a href={RESUME_URL} download={RESUME_FILE_NAME} onClick={handleResumeClick} 
+          className="btn-resume"><span>Resume</span><span>↓</span></a>
+          
+        </div>
         <div
           className={`mobile-toggle ${menuOpen ? 'active' : ''}`}
           onClick={() => setMenuOpen(!menuOpen)}
